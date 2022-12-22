@@ -42,6 +42,8 @@ function render(array, node) {
             elText.style.textDecoration = 'line-through';
         }
 
+        elAll.textContent = todos.length;
+
 
         node.appendChild(elLi)
     });
@@ -59,7 +61,7 @@ elForm.addEventListener('submit', function(evt) {
         }
     )
 
-    elAll.textContent = todos.length;
+    
     render(todos, elList);
     todo.value = '';
 })
